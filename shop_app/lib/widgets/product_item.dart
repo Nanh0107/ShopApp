@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_complete_guide/providers/products.dart';
 import 'package:provider/provider.dart';
 
 import '../screens/product_detail_screen.dart';
@@ -41,6 +42,7 @@ class ProductItem extends StatelessWidget {
                   color: Theme.of(context).accentColor,
                   onPressed: () {
                     product.toggleFavoriteStatus();
+                    // Provider.of<Products>(context,listen: false).saveFavoverite(product.id,product.isFavorite );
                   },
                 ),
           ),
